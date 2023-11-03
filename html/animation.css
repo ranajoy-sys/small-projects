@@ -1,0 +1,13 @@
+
+ .sphere{
+    width: 100px;
+    height: 100px;
+    background: red;  
+    transition: width 2s, height 2s, border-radius 2s, background green;  
+ }
+ .sphere:hover {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: green;
+ }

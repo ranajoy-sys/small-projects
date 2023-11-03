@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Phn number validation</title>
+</head>
+<body>
+	<form onsubmit="return add()" action="validatio1.html">
+		<fieldset>
+			<legend style="text-align:center;">Validation form for mobile number</legend>
+			<label>Mobile No.</label>
+			<select>
+				<option>+91</option>
+				<option>+92</option>
+				<option>+93</option>
+			</select>
+			<input type="text" id="f1" placeholder="Enter Your Mobile number">
+			<span id="f5"></span>
+			<br><br>
+			<button type="submit">Submit</button>
+		</fieldset>
+		
+	</form>
+ <script type="text/javascript">
+ 	function add(){
+ 		var a = document.getElementById('f1').value;
+
+ 	    if(a==""){
+ 	    	document.getElementById('f5').innerHTML="*Whats Your Mobile number*"
+ 	    	document.getElementById('f5').style.color="red"
+ 	    	return false;
+ 	    }
+ 	    if(isNaN(a)){
+ 	    	document.getElementById('f5').innerHTML="*number dena padhega*"
+ 	    	document.getElementById('f5').style.color="red"
+ 	    	return false;
+ 	    }
+ 	    if(a.length!=10){
+ 	    	document.getElementById('f5').innerHTML="*it must be a 10 digit number*"
+ 	    	document.getElementById('f5').style.color="red"
+ 	    	return false;
+ 	    }
+ 	    if(a.charAt(0)<6){
+ 	    	document.getElementById('f5').innerHTML="*Please enter a valid number*"
+ 	    	document.getElementById('f5').style.color="red"
+ 	    	return false;
+ 	    }
+ 	}
+ 	
+ </script>  
+
+</body>
+</html>

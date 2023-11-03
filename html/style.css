@@ -1,0 +1,19 @@
+*
+{
+	margin: 10px 10px;
+}
+body {
+	background-color: blue; 
+}
+.main  {
+	text-align: center;
+}
+.GGF {
+	color: cyan;
+	font-size: 50px;
+	font-weight:bold;
+}
+#geeks {
+	font-style: bold;
+	font-size: 20px;
+}

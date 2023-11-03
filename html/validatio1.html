@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Password validation</title>
+</head>
+<body>
+	<form onsubmit="return val()" >
+		<fieldset>
+			<legend style="text-align:center;">Validation form for password</legend>
+			<label>Password.</label>
+			
+			<input type="text" id="f1" placeholder="Enter Your Password">
+			<span id="f5"></span>
+			<br><br>
+			<button type="submit">Submit</button>
+		</fieldset>
+		
+	</form>
+ <script type="text/javascript">
+ 	function val(){
+ 		var s = document.getElementById('f1').value;
+
+ 	    if(s==""){
+ 	    	document.getElementById('f5').innerHTML="*Whats Your password*"
+ 	    	document.getElementById('f5').style.color="red"
+ 	    	return false;
+ 	    }
+ 	    if(s.length<8){
+ 	    	document.getElementById('f5').innerHTML="*it must be a 10 digit number*"
+ 	    	document.getElementById('f5').style.color="red"
+ 	    	return false;
+ 	    }
+ 	    if(s.search(/[0-9]/)==-1){
+ 	    	document.getElementById('f5').innerHTML="*Enter atleast 1 numeric *"
+ 	    	document.getElementById('f5').style.color="red"
+ 	    	return false;
+ 	    }
+ 	     if(s.search(/[A-Z]/)==-1){
+ 	    	document.getElementById('f5').innerHTML="*Enter atleast 1 Uppercase *"
+ 	    	document.getElementById('f5').style.color="red"
+ 	    	return false;
+ 	    }
+ 	     if(s.search(/[@\#\&\_\*]/)==-1){
+ 	    	document.getElementById('f5').innerHTML="*Enter atleast 1 Special character *"
+ 	    	document.getElementById('f5').style.color="red"
+ 	    	return false;
+ 	    }
+ 	}
+ 	
+ </script>  
+
+</body>
+</html>
